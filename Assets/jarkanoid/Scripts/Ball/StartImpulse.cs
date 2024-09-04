@@ -23,6 +23,8 @@ namespace GameBall
             {
                 isStarted = true;
                 rb.constraints = RigidbodyConstraints2D.None;
+                // rb.constraints = RigidbodyConstraints2D.None;
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                 rb.velocity = new Vector2(Random.Range(-0.5f, 0.5f), Random.Range(0f, 1f)).normalized * speed;
             }
         }
