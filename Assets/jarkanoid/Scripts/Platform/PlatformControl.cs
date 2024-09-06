@@ -30,6 +30,8 @@ namespace GamePlatform
 
         void Update()
         {
+            if (!gameController.isStarted) return;
+
             float x = Input.GetAxis("Horizontal");
             if (Mathf.Abs(x) > 1e-6)
             {
